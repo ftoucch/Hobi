@@ -12,7 +12,45 @@
  * @package Lesson
  */
 get_header(); 
+
+?>
+
+<main class="main-content">
+<?php 
+if(is_front_page())
+{
+    if (have_posts()):
+        // function to check if its is home page and to display the Page Title
+        while (have_posts()):
+            the_post() ?>
+           <?php get_template_part('template-parts/content-page', get_post_format()); ?> 
+    
+    
+        <?php
+        endwhile;
+    
+    endif; 
+}
+else
+{
+if (have_posts()):
+    // function to check if its is home page and to display the Page Title
+    while (have_posts()):
+        the_post() ?>
+       <?php get_template_part('template-parts/content', get_post_format()); ?> 
+
+
+    <?php
+    endwhile;
+
+endif;
+
+}
 ?>
 
 
-<?php get_footer(); ?>
+</main>
+<?php
+get_footer();
+?>
+

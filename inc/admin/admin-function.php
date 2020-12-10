@@ -24,7 +24,7 @@ $page_title = 'HOBI Theme Option';
 $menu_title ='HOBI';
 $capability = 'manage_options';
 $menu_slug = 'HOBI_theme_option';
-$icon_url = get_template_directory_uri().'/asset/img/hobi-icon-3.png';
+$icon_url = get_template_directory_uri().'/assets/img/hobi-icon-3.png';
     add_menu_page( $page_title, $menu_title,$capability, $menu_slug,'HOBI_create_admin_page',$icon_url, 200 );
 }
 
